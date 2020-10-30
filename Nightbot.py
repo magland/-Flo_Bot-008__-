@@ -25,12 +25,14 @@ class SimpleHandler:
             await message.channel.send(self.response)
             return
         words = message.content.split()
-        if words[0] == self.trigger:
-            await message.channel.send(self.response)
-            return
-        if words[0] in self.trigger:
-            await message.channel.send(self.response)
-            return
+        if isinstance(self.trigger, str):
+            if words[0] == self.trigger:
+                await message.channel.send(self.response)
+                return
+        elif isinstance(self.trigger, list):
+            if words[0] in self.trigger:
+                await message.channel.send(self.response)
+                return
 
 class ArgumentHandler:
     def __init__(self, trigger, response):
