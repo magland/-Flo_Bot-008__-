@@ -179,12 +179,4 @@ class MyClient(discord.Client):
         return False
 
 client = MyClient()
-client.run('NzcxMTA4NjM3NjczNjUyMjY3.X5nU4Q.NIQb76T2Yne5rN15UMOmrLhR4S4')
-
-
-# !bored
-# !slots
-# !sad
-# !bye
-# Online
-# 
+client.run('Super Real Key')
